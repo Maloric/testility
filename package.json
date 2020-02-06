@@ -1,0 +1,37 @@
+{
+    "name": "@maloric/testility",
+    "version": "1.1.0",
+    "description": "A small collection of testing utilities, including a Mock Promise Wrapper, a Test Data Factory and several utilities for generating randomised data.",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "rimraf dist && tsc"
+    },
+    "author": {
+        "email": "jamie@maloric.com",
+        "name": "Jamie Morris",
+        "url": "http://www.medium.com/@maloric"
+    },
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/cli": "^7.7.7",
+        "@babel/core": "^7.7.7",
+        "@babel/preset-env": "^7.7.7",
+        "@babel/preset-typescript": "^7.7.7",
+        "rimraf": "^3.0.0",
+        "typescript": "^3.7.4"
+    },
+    "peerDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Maloric/testility"
+    },
+    "keywords": [
+        "Typescript",
+        "Javascript",
+        "Testing",
+        "Unit Test",
+        "Tools"
+    ]
+}
