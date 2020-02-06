@@ -1,11 +1,12 @@
 {
     "name": "@maloric/testility",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A small collection of testing utilities, including a Mock Promise Wrapper, a Test Data Factory and several utilities for generating randomised data.",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "main": "./index.js",
+    "types": "./index.d.ts",
     "scripts": {
-        "build": "rimraf dist && tsc"
+        "build": "rimraf dist && tsc && cp ./LICENSE.md dist/ && cp ./README.md dist/ && cp ./package.json dist/",
+        "publish": "npm run build && cd dist && npm publish --access=public"
     },
     "author": {
         "email": "jamie@maloric.com",
