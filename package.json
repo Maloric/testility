@@ -1,6 +1,6 @@
 {
     "name": "@maloric/testility",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "description": "A small collection of testing utilities, including a Mock Promise Wrapper, a Test Data Factory and several utilities for generating randomised data.",
     "main": "./index.js",
     "types": "./index.d.ts",
@@ -14,9 +14,7 @@
         "url": "http://www.medium.com/@maloric"
     },
     "license": "ISC",
-    "dependencies": {
-        "tslib": "^1.10.0"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@babel/cli": "^7.7.7",
         "@babel/core": "^7.7.7",
