@@ -1,6 +1,6 @@
 {
     "name": "@maloric/testility",
-    "version": "1.1.4",
+    "version": "1.1.6",
     "description": "A small collection of testing utilities, including a Mock Promise Wrapper, a Test Data Factory and several utilities for generating randomised data.",
     "main": "./index.js",
     "types": "./index.d.ts",
@@ -16,14 +16,18 @@
     "license": "ISC",
     "dependencies": {},
     "devDependencies": {
+        "@angular/core": "^9.0.0",
         "@babel/cli": "^7.7.7",
         "@babel/core": "^7.7.7",
         "@babel/preset-env": "^7.7.7",
         "@babel/preset-typescript": "^7.7.7",
         "rimraf": "^3.0.0",
+        "rxjs": "^6.5.4",
         "typescript": "^3.7.4"
     },
-    "peerDependencies": {},
+    "peerDependencies": {
+        "@angular/core": "*"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/Maloric/testility"
