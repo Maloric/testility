@@ -1,12 +1,13 @@
 {
     "name": "@maloric/testility",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "description": "A small collection of testing utilities, including a Mock Promise Wrapper, a Test Data Factory and several utilities for generating randomised data.",
     "main": "./index.js",
     "types": "./index.d.ts",
     "scripts": {
         "build": "rimraf dist && tsc && cp ./LICENSE.md dist/ && cp ./README.md dist/ && cp ./package.json dist/",
-        "publish": "npm run build && cd dist && npm publish --access=public"
+        "publish": "npm run build && cd dist && npm publish --access=public",
+        "test": "ts-node ./node_modules/.bin/jasmine --config=./jasmine.json"
     },
     "author": {
         "email": "jamie@maloric.com",
@@ -21,8 +22,11 @@
         "@babel/core": "^7.7.7",
         "@babel/preset-env": "^7.7.7",
         "@babel/preset-typescript": "^7.7.7",
+        "@types/jasmine": "^3.5.7",
+        "jasmine": "^3.5.0",
         "rimraf": "^3.0.0",
         "rxjs": "^6.5.4",
+        "ts-node": "^8.6.2",
         "typescript": "^3.7.4"
     },
     "peerDependencies": {

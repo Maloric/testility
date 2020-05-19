@@ -13,7 +13,7 @@ export class MockPromiseWrapper<T> {
             resolve();
         });
     }
-    reject(reason?: T): Promise<void> {
+    reject(reason?: any): Promise<void> {
         this._reject(reason);
         return new Promise<void>((resolve, _reject) => {
             resolve();

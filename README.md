@@ -116,3 +116,35 @@ The wrapper contains a `promise` property, containing the actual promise, a `res
             });
         });
     });
+
+## Angular Template Test Component
+
+I had a scenario where I was passing a template to a modal service, but wanted to test the contents of the template in the component where it is defined. It turns out that the best way to test this is to render the template and then make assertions on the content as you normally would. To make that easier, I created a wrapping component and a method to get you the ComponentFixture containing your rendered template:
+
+    import { TemplateTestComponent, renderTemplateRef } from '@maloric/testility/angular';
+
+    ...
+
+    TestBed.configureTestingModule({
+        declarations: [
+            MyComponent, // My component under test
+            TemplateTestComponent
+        ]
+    });
+    fixture = TestBed.createComponent(MyComponent);
+
+    ...
+
+    it('should do something', () => {
+        // These two lines are just the way I was getting my templateRef
+        // Your exact way of getting to your templateRef may differ
+        let config = mockModal.show.calls.mostRecent().args[0];
+        let template = config.props.contentTemplate as TemplateRef<any>;
+
+        // This is the important bit
+        let myModalContent = renderTemplateRef(template);
+
+        // And now I can look at the contents of my template as I would any other
+        let mySubComponent = myModalContent.debugElement.query(By.css('my-sub-component'));
+        expect(mySubComponent).toBeTruthy();
+    });

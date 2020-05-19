@@ -1,0 +1,6 @@
+{
+    "spec_files": ["src/**/*[sS]pec.ts"],
+    "helpers": ["helpers/**/*.js"],
+    "stopSpecOnExpectationFailure": false,
+    "random": true
+}
