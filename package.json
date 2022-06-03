@@ -17,7 +17,7 @@
     "license": "ISC",
     "dependencies": {},
     "devDependencies": {
-        "@angular/core": "^9.0.0",
+        "@angular/core": "^11.0.5",
         "@babel/cli": "^7.7.7",
         "@babel/core": "^7.7.7",
         "@babel/preset-env": "^7.7.7",
